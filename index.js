@@ -32,6 +32,13 @@ app.use("/api/client", clientRoutes);
 app.use("/api/management", managementRoutes);
 app.use("/api/sales", salesRoutes);
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Connect to DB & Server running on port ${port}`);
+    });
+  });
