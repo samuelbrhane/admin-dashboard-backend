@@ -6,10 +6,10 @@ const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const dotenv = require("dotenv");
-const mainRoutes = require("./routes/mainRoutes");
-const salesRoutes = require("./routes/salesRoutes");
-const managementRoutes = require("./routes/managementRoutes");
-const clientRoutes = require("./routes/clientRoutes");
+const mainRoutes = require("./routes/main");
+const salesRoutes = require("./routes/sales");
+const managementRoutes = require("./routes/management");
+const clientRoutes = require("./routes/client");
 
 // Configuration
 dotenv.config();
