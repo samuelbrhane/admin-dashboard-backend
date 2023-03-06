@@ -10,7 +10,6 @@ const mainRoutes = require("./routes/main");
 const salesRoutes = require("./routes/sales");
 const managementRoutes = require("./routes/management");
 const clientRoutes = require("./routes/client");
-const User = require("./models/user");
 
 // Configuration
 dotenv.config();
