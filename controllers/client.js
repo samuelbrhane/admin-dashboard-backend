@@ -24,7 +24,7 @@ const getProducts = async (req, res) => {
 // get all customers
 const getCustomers = async (req, res) => {
   try {
-    const customers = await User.find().select("-password");
+    const customers = await User.find({ role: "user" }).select("-password");
     res.status(200).json(customers);
   } catch (err) {
     res.status(500).json({ message: err.message });
