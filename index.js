@@ -6,7 +6,6 @@ const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const dotenv = require("dotenv");
-const mainRoutes = require("./routes/main");
 const salesRoutes = require("./routes/sales");
 const managementRoutes = require("./routes/management");
 const clientRoutes = require("./routes/client");
@@ -27,7 +26,6 @@ app.get("/", (req, res) => {
   res.status(200).send("<h1>Welcome to Admin Dashboard API.</h1>");
 });
 
-app.use("/api/main", mainRoutes);
 app.use("/api/client", clientRoutes);
 app.use("/api/management", managementRoutes);
 app.use("/api/sales", salesRoutes);
