@@ -34,7 +34,7 @@ const getCustomers = async (req, res) => {
 // get transactions
 const getTransactions = async (req, res) => {
   try {
-    const transactions = await Transaction.find();
+    const transactions = await Transaction.find().limit(200);
     res.status(200).json(transactions);
   } catch (err) {
     res.status(500).json({ message: err.message });
